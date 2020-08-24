@@ -73,7 +73,7 @@ public class Search1 extends HttpServlet {
  
                     RequestDispatcher rd=request.getRequestDispatcher("Home.jsp");  
                     rd.include(request, response);  
-                      out.print("<body><center><b><font color='red'>Please choose from topics given in feed</font></b></center></body>");
+                      out.print("<body><center><b><font color='red'>Please choose from topics given in feed</font></b></center></body>"); // If keyword not found inside the database
                     //response.sendRedirect("Login.html");
         } catch (Exception ex) {
                
