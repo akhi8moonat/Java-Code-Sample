@@ -1,0 +1,60 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package LoginVerify;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+/**
+ *
+ * @author Akhilesh
+ */
+public class LoginDAO {
+    public boolean check(Login log)
+    {
+       Session session=null;
+        Configuration cf=null;
+        SessionFactory sf = null;
+        Login db=null;
+         try
+        {
+            cf=new Configuration();
+        cf.configure("CFG/hibernate.cfg.xml");
+        sf = cf.buildSessionFactory();
+        session=sf.openSession();
+        Transaction tx = session.beginTransaction();
+        session.get(Login.class,log.getUsername());
+        db=(Login)session.get(Login.class,log.getUsername());
+        if(log.equals(db))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        }
+        catch(Exception e)
+        {
+           System.out.println("Exception Handled");
+        }
+         finally
+         {
+        session.close();
+        sf.close();
+         }
+         if(db==null)//If value of does not exist in database
+             return false;
+         else
+         return log.equals(db);//it tells if both objects are equal or not;
+    }
+}
