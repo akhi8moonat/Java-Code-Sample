@@ -21,6 +21,9 @@ import javax.servlet.http.HttpSession;
  *
  * @author Akhilesh
  */
+
+//Creating session for currently logged in user
+
 public class Session3 extends HttpServlet {
 
      @Override
