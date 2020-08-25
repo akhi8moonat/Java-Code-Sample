@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-// Implementing Search functionality in the project
+// Implementing Search functionality in the project by verifying the keywords entered by the user from the database and then redirecting the user to specified page on clicking search
 
 public class Search1 extends HttpServlet {
 
