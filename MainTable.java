@@ -12,6 +12,7 @@ import javax.persistence.Id;
  *
  * @author Akhilesh
  */
+//Creating this class so as to map all the details of this class with the table having same name and column names in database.
 @Entity
 public class MainTable
 {
