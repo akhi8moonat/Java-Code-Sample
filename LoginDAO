@@ -18,6 +18,8 @@ import org.hibernate.cfg.Configuration;
  *
  * @author Akhilesh
  */
+ 
+ //This program verifies the details entered by the user during login from the database.
 public class LoginDAO {
     public boolean check(Login log)
     {
