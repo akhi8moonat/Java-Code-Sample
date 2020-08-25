@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Akhilesh
  */
-//Registering the user by taking the values from the form and inserting into the database. 
+//Registering the user by taking the values from the form and inserting into the database using JDBC.
 
 public class RegisterServlet extends HttpServlet {
     
